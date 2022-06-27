@@ -1,0 +1,8 @@
+h1 {
+    color: orange;
+}
+
+h1::after, h1::before {
+    content: 'Hello from CSS !';
+    color: white;
+}
