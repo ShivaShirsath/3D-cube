@@ -1,8 +1,40 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    border-radius: 2.5vmax;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+
+    margin: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 h1 {
     color: orange;
 }
 
-h1::after, h1::before {
-    content: 'Hello from CSS !';
+h1::after,
+h1::before {
+    content: ' Hello from CSS ! ';
     color: white;
+    border: .25vmin solid orange;
 }

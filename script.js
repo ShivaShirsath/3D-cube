@@ -1,1 +1,1 @@
-document.write("Hello using JavaScript !")
+document.write(" Hello using JavaScript ! ")
