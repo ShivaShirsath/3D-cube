@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Web
+    </title>
+    <link href="../style.css" rel="stylesheet">
+  </head>
+  <body></body>
+<script>
+function readTextFile() {
+  var rawFile = new XMLHttpRequest();
+  rawFile.open("GET", "../index.html", true);
+  rawFile.onreadystatechange = function() {
+    if (rawFile.readyState === 4) {
+      var allText = rawFile.responseText;
+      document.body.innerHTML = allText;
+    }
+  }
+  rawFile.send();
+}
+readTextFile();
+</script>
+<script>
+document.addEventListener('visibilitychange', e =>{
+  if (document.visibilityState === 'visible') {
+    document.location.reload(true);
+  }
+});
+</script>
+<script src="../script.js"></script>
+</html>
