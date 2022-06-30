@@ -4,13 +4,13 @@
     <title>
       Web
     </title>
-    <link href="../style.css" rel="stylesheet">
+    <link href="docs/style.css" rel="stylesheet">
   </head>
   <body></body>
 <script>
 function readTextFile() {
   var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", "../index.html", true);
+  rawFile.open("GET", "docs/index.html", true);
   rawFile.onreadystatechange = function() {
     if (rawFile.readyState === 4) {
       var allText = rawFile.responseText;
@@ -28,5 +28,5 @@ document.addEventListener('visibilitychange', e =>{
   }
 });
 </script>
-<script src="../script.js"></script>
+<script src="docs/script.js"></script>
 </html>
