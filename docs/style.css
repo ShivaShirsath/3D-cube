@@ -12,10 +12,7 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
-}
-
-p {
-    margin: 5vmin;
+    perspective: 100vmin;
 }
 
 div>div {
@@ -28,12 +25,7 @@ div>div {
     text-align: center;
 }
 
-.scene {
-    perspective: 100vmin;
-    border: .1vmax solid red;
-}
-
-.cube {
+#cube {
     width: 45vmin;
     height: 45vmin;
     position: relative;
@@ -41,74 +33,33 @@ div>div {
     transition: transform 1s;
 }
 
-.cube.show-front {
-    transform: translateZ(0vmin) rotateY(0deg);
+div>div:nth-child(1) {
+    transform: translateZ(25vmin);
+    background: hsla(0, 100%, 50%, .5);
 }
 
-.cube.show-right {
-    transform: translateZ(0vmin) rotateY(-90deg);
+div>div:nth-child(2) {
+    transform: translateZ(-25vmin);
+    background: hsla(30, 100%, 50%, .5);
 }
 
-.cube.show-back {
-    transform: translateZ(0vmin) rotateY(-180deg);
-}
 
-.cube.show-left {
-    transform: translateZ(0vmin) rotateY(90deg);
-}
-
-.cube.show-top {
-    transform: translateZ(0vmin) rotateX(-90deg);
-}
-
-.cube.show-bottom {
-    transform: translateZ(0vmin) rotateX(90deg);
-}
-
-.front {
-    background: hsla(0, 100%, 50%, 0.7);
-}
-
-.right {
-    background: hsla(60, 100%, 50%, 0.7);
-}
-
-.back {
-    background: hsla(120, 100%, 50%, 0.7);
-}
-
-.left {
-    background: hsla(180, 100%, 50%, 0.7);
-}
-
-.top {
-    background: hsla(240, 100%, 50%, 0.7);
-}
-
-.bottom {
-    background: hsla(300, 100%, 50%, 0.7);
-}
-
-.front {
-    transform: rotateY(0deg) translateZ(25vmin);
-}
-
-.right {
-    transform: rotateY(90deg) translateZ(25vmin);
-}
-
-.back {
-    transform: rotateY(180deg) translateZ(25vmin);
-}
-
-.left {
-    transform: rotateY(-90deg) translateZ(25vmin);
-}
-
-.top {
+div>div:nth-child(3) {
     transform: rotateX(90deg) translateZ(25vmin);
+    background: hsla(120, 100%, 50%, .5);
 }
 
-.bottom {
+div>div:nth-child(4) {
     transform: rotateX(-90deg) translateZ(25vmin);
+    background: hsla(180, 100%, 50%, .5);
+}
+
+div>div:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(25vmin);
+    background: hsla(240, 100%, 50%, .5);
+}
+
+div>div:nth-child(6) {
+    transform: rotateY(90deg) translateZ(25vmin);
+    background: hsla(300, 100%, 50%, .5);
 }
