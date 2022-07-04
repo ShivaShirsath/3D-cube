@@ -4,21 +4,111 @@
     box-sizing: border-box;
 }
 
-div {
+body {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: center;
     align-items: center;
 }
-div > div {
-    width: 25vmin;
-    height: 25vmin;
-    background: orange;
-    position: absolute;
+
+p {
+    margin: 5vmin;
 }
 
-div > div:nth-child(1) {
-    transform: translate3d(-25vmin, -25vmin, 25vmin);
+div>div {
+    width: 25vmin;
+    height: 25vmin;
+    line-height: 25vmin;
+    position: absolute;
+    font-size: x-large;
+    color: black;
+    text-align: center;
+}
+
+.scene {
+    perspective: 100vmin;
+    border: .1vmax solid red;
+}
+
+.cube {
+    width: 45vmin;
+    height: 45vmin;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.cube.show-front {
+    transform: translateZ(0vmin) rotateY(0deg);
+}
+
+.cube.show-right {
+    transform: translateZ(0vmin) rotateY(-90deg);
+}
+
+.cube.show-back {
+    transform: translateZ(0vmin) rotateY(-180deg);
+}
+
+.cube.show-left {
+    transform: translateZ(0vmin) rotateY(90deg);
+}
+
+.cube.show-top {
+    transform: translateZ(0vmin) rotateX(-90deg);
+}
+
+.cube.show-bottom {
+    transform: translateZ(0vmin) rotateX(90deg);
+}
+
+.front {
+    background: hsla(0, 100%, 50%, 0.7);
+}
+
+.right {
+    background: hsla(60, 100%, 50%, 0.7);
+}
+
+.back {
+    background: hsla(120, 100%, 50%, 0.7);
+}
+
+.left {
+    background: hsla(180, 100%, 50%, 0.7);
+}
+
+.top {
+    background: hsla(240, 100%, 50%, 0.7);
+}
+
+.bottom {
+    background: hsla(300, 100%, 50%, 0.7);
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(25vmin);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(25vmin);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(25vmin);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(25vmin);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(25vmin);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(25vmin);
 }
