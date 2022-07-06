@@ -3,7 +3,7 @@ document.onclick = (e) => {
   alert(e.target.id)
   switch (e.target.id) {
     case 'top':
-      cube.style.transform = "rotateX(-90deg)";
+      cube.style.transform = "rotateX(90deg) translateY(25vmin)";
       break;
     case 'bottom':
       cube.style.transform = "rotateX(90deg)";
@@ -15,7 +15,7 @@ document.onclick = (e) => {
       cube.style.transform = "rotateY(-90deg)";
       break;
     case 'front':
-      cube.style.transform = "rotateZ(-90deg)";
+      cube.style.transform = "rotateX(-90deg)";
       break;
     case 'back':
       cube.style.transform = "rotateX(180deg)";
