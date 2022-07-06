@@ -11,74 +11,75 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    perspective: 100vmin;
+    /*perspective: 100vmin;*/
 }
 
 div {
-    height: 25vmin;
-    width: 25vmin;
+    height: 50vmin;
+    width: 50vmin;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s;
 }
 
-div > div {
-    line-height: 25vmin;
+div>div {
     position: absolute;
-    font-size: 5vmin;
-    font-variant-caps: petite-caps;
-    color: black;
-    text-align: center;
     opacity: .25;
 }
 
-div>div:nth-child(1) {
-    transform: translateZ(12.5vmin);
+div > div:nth-child(1) {
+    transform: translateZ(25vmin);
     background: red;
 }
 
-div>div:nth-child(2) {
-    transform: translateZ(-12.5vmin) rotateY(180deg);
+div > div:nth-child(2) {
+    transform: translateZ(-25vmin) rotateY(180deg);
     background: yellow;
 }
 
 
-div>div:nth-child(3) {
-    transform: translateY(-12.5vmin) rotateX(90deg);
+div > div:nth-child(3) {
+    transform: translateY(-25vmin) rotateX(90deg);
     background: green;
 }
 
-div>div:nth-child(4) {
-    transform: translateY(12.5vmin) rotateX(-90deg);
+div > div:nth-child(4) {
+    transform: translateY(25vmin) rotateX(-90deg);
     background: cyan;
 }
 
-div>div:nth-child(5) {
-    transform: translateX(12.5vmin) rotateY(90deg);
+div > div:nth-child(5) {
+    transform: translateX(25vmin) rotateY(90deg);
     background: blue;
 }
 
-div>div:nth-child(6) {
-    transform: translateX(-12.5vmin) rotateY(-90deg);
+div > div:nth-child(6) {
+    transform: translateX(-25vmin) rotateY(-90deg);
     background: violet;
 }
+
 #cube {
-    animation: 10s spin infinite;
+    animation: 5s spin infinite linear alternate;
 }
+
 @keyframes spin {
     0% {
-        transform: rotate3d(1, 0, 0, 0deg);
+        transform: rotate3d(1, 0, 1, 72deg);
     }
+
     25% {
-        transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(1, 1, 0, 144deg);
     }
+
     50% {
-        transform: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 1, 1, 216deg);
     }
+
     75% {
-        transform: rotate3d(0, 1, 0, 270deg);
+        transform: rotate3d(1, 0, 1, 288deg);
     }
+
     100% {
-        transform: rotate3d(1, 0, 0, 360deg);
+        transform: rotate3d(1, 1, 0, 360deg);
     }
 }
