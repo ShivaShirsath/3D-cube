@@ -34,18 +34,18 @@ div > div:nth-child(1) {
 
 div > div:nth-child(2) {
     transform: translateZ(-25vmin) rotateY(180deg);
-    background: yellow;
+    background: orange;
 }
 
 
 div > div:nth-child(3) {
     transform: translateY(-25vmin) rotateX(90deg);
-    background: green;
+    background: yellow;
 }
 
 div > div:nth-child(4) {
     transform: translateY(25vmin) rotateX(-90deg);
-    background: cyan;
+    background: green;
 }
 
 div > div:nth-child(5) {
@@ -55,7 +55,7 @@ div > div:nth-child(5) {
 
 div > div:nth-child(6) {
     transform: translateX(-25vmin) rotateY(-90deg);
-    background: violet;
+    background: purple;
 }
 
 #cube {
