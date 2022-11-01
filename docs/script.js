@@ -1,24 +1,24 @@
-var cube = document.getElementById("cube")
+var cube = document.getElementsByTagName("div")
+
 document.onclick = (e) => {
-  alert(e.target.id)
-  switch (e.target.id) {
-    case 'top':
-      cube.style.transform = "rotateX(90deg) translateY(50vmin)";
+  switch (e.target) {
+    case cube[1]:
+      alert(1)
       break;
-    case 'bottom':
-      cube.style.transform = "rotateX(90deg)";
+    case cube[2]:
+      alert(2)
       break;
-    case 'left':
-      cube.style.transform = "rotateY(90deg)";
+    case cube[3]:
+      alert(3)
       break;
-    case 'right':
-      cube.style.transform = "rotateY(-90deg)";
+    case cube[4]:
+      alert(4)
       break;
-    case 'front':
-      cube.style.transform = "rotateX(-90deg)";
+    case cube[5]:
+      alert(5)
       break;
-    case 'back':
-      cube.style.transform = "rotateX(180deg)";
+    case cube[6]:
+      alert(6)
       break;
   }
 }

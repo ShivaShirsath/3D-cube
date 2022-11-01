@@ -5,13 +5,15 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /*perspective: 100vmin;*/
+    justify-content: center;
 }
 
 div {
@@ -19,67 +21,71 @@ div {
     width: 50vmin;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s;
 }
 
-div>div {
+div > div {
     position: absolute;
     opacity: .25;
 }
 
 div > div:nth-child(1) {
-    transform: translateZ(25vmin);
+    translate: 0 0 25vmin;
     background: red;
 }
 
 div > div:nth-child(2) {
-    transform: translateZ(-25vmin) rotateY(180deg);
+    translate: 0 0 -25vmin;
+    rotate: y 180deg;
     background: orange;
 }
 
 
 div > div:nth-child(3) {
-    transform: translateY(-25vmin) rotateX(90deg);
+    translate: 0 -25vmin 0;
+    rotate: x 90deg;
     background: yellow;
 }
 
 div > div:nth-child(4) {
-    transform: translateY(25vmin) rotateX(-90deg);
+    translate: 0 25vmin 0;
+    rotate: x -90deg;
     background: green;
 }
 
 div > div:nth-child(5) {
-    transform: translateX(25vmin) rotateY(90deg);
+    translate: 25vmin 0 0;
+    rotate: y 90deg;
     background: blue;
 }
 
 div > div:nth-child(6) {
-    transform: translateX(-25vmin) rotateY(-90deg);
+    translate: -25vmin 0 0;
+    rotate: y -90deg;
     background: purple;
 }
 
-#cube {
+div:not(div>div) {
     animation: 5s spin infinite linear alternate;
 }
 
 @keyframes spin {
     0% {
-        transform: rotate3d(1, 0, 1, 72deg);
+        rotate: 1 0 1 72deg;
     }
 
     25% {
-        transform: rotate3d(1, 1, 0, 144deg);
+        rotate: 1 1 0 144deg;
     }
 
     50% {
-        transform: rotate3d(0, 1, 1, 216deg);
+        rotate: 0 1 1 216deg;
     }
 
     75% {
-        transform: rotate3d(1, 0, 1, 288deg);
+        rotate: 1 0 1 288deg;
     }
 
     100% {
-        transform: rotate3d(1, 1, 0, 360deg);
+        rotate: 1 1 0 360deg;
     }
 }
